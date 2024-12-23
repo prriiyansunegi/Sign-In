@@ -3,9 +3,13 @@ import {getAuth, onAuthStateChanged, signOut} from "https://www.gstatic.com/fire
 import{getFirestore, getDoc, doc} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"
 
 const firebaseConfig = {
-    //YOUR COPIED FIREBASE PART SHOULD BE HERE
- //WATCH THIS VIDEO TO LEARN WHAT TO PUT HERE   https://youtu.be/_Xczf06n6x0
-  };
+  apiKey: "AIzaSyD7ipgfhUWHKHXi6EvmEBpYkYrtUqv4d8Q",
+  authDomain: "login-form-4d403.firebaseapp.com",
+  projectId: "login-form-4d403",
+  storageBucket: "login-form-4d403.firebasestorage.app",
+  messagingSenderId: "257470643649",
+  appId: "1:257470643649:web:4e6956b378da38b054c340"
+};
  
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
