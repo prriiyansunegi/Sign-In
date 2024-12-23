@@ -25,6 +25,31 @@ const auth = getAuth(app);
 auth.languageCode = 'en'
 const provider = new GoogleAuthProvider();
 
+
+const googleLogin = document.getElementById("google-login-btn";
+googleLogin.addEventListener("click", function(){
+ signInWithPopup(auth, provider)
+  .then((result) => {
+ 
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential.accessToken;
+
+    const user = result.user;
+   console.log(user);
+   window.location.href = "https://prriiyansunegi.github.io/STAY-MITRA/";
+   
+  }).catch((error) => {
+    
+    const errorCode = error.code;
+    const errorMessage = error.message;
+
+    const email = error.customData.email;
+    
+    const credential = GoogleAuthProvider.credentialFromError(error);
+    // ...
+  });
+} )
+
  function showMessage(message, divId){
     var messageDiv=document.getElementById(divId);
     messageDiv.style.display="block";
