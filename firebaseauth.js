@@ -34,7 +34,7 @@ googleLogin.addEventListener("click", function(){
     const credential = GoogleAuthProvider.credentialFromResult(result);
     const user = result.user;
    console.log(user);
-   window.location.href = "https://prriiyansunegi.github.io/STAY-MITRA/";
+   window.location.href = "https://prriiyansunegi.github.io/Roomiefy/";
    
   }).catch((error) => {
     
@@ -105,7 +105,7 @@ googleLogin.addEventListener("click", function(){
         showMessage('login is successful', 'signInMessage');
         const user=userCredential.user;
         localStorage.setItem('loggedInUserId', user.uid);
-        window.location.href='https://prriiyansunegi.github.io/STAY-MITRA/';
+        window.location.href='https://prriiyansunegi.github.io/Roomiefy/';
     })
     .catch((error)=>{
         const errorCode=error.code;
